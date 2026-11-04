@@ -3,15 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "setup": "node make-sources.js",
+    "start": "node make-sources.js && node repro-cli.js --json public/cli-runs.json && vite",
     "repro:cli": "node make-sources.js && node repro-cli.js",
     "repro:order": "node repro-order.js",
-    "start": "node make-sources.js && node repro-order.js && node repro-cli.js"
+    "build": "node make-sources.js && node repro-cli.js --json public/cli-runs.json && vite build"
   },
   "dependencies": {
     "@unocss/cli": "66.12.0",
     "@unocss/core": "66.12.0",
     "@unocss/preset-wind4": "66.12.0",
     "unocss": "66.12.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.5"
   }
 }

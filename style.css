@@ -1,0 +1,14 @@
+body { font: 15px/1.5 system-ui, sans-serif; margin: 2rem auto; max-width: 70rem; padding: 0 1rem; color: #1d2433; }
+h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+h2 { font-size: 1.1rem; margin-top: 2rem; }
+.lead { color: #4a5568; }
+code { background: #eef1f6; padding: 0 0.25em; border-radius: 3px; }
+button { font: inherit; padding: 0.3rem 0.8rem; cursor: pointer; }
+.summary { font-weight: 600; margin: 0.75rem 0 0.5rem; }
+.summary.bad { color: #b42318; }
+.summary.good { color: #1a7f37; }
+.row { display: flex; align-items: center; gap: 2px; margin: 3px 0; }
+.label { width: 7.5rem; flex: none; font: 12px ui-monospace, monospace; color: #4a5568; }
+.chip { height: 22px; min-width: 22px; flex: 1 1 0; border-radius: 3px; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; margin-top: 0.75rem; font: 12px ui-monospace, monospace; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; background: var(--c); }

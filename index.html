@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>UnoCSS preset-wind4: theme block order</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <h1>UnoCSS preset-wind4: the theme block order isn't deterministic</h1>
+        <p class="lead">
+            Each chip is one variable in <code>:root, :host { … }</code>, coloured by name. Every row should have the
+            same pattern; differing rows mean a byte-different <code>uno.css</code> for the same input.
+        </p>
+
+        <section>
+            <h2>1. Generator: same tokens, different order</h2>
+            <p>
+                <code>createGenerator({ presets: [presetWind4()] })</code> runs here in the browser with the same
+                set of tokens, shuffled. The theme block follows the token order.
+            </p>
+            <button id="shuffle">Shuffle again</button>
+            <div id="generator"></div>
+        </section>
+
+        <section>
+            <h2>2. CLI: same files, 20 runs</h2>
+            <p>
+                <code>unocss "src/**/*.ts" --out-file out.css</code>, run 20 times on 60 unchanged files in nested
+                folders before the page started. The CLI keeps tinyglobby's file order, which varies for nested
+                folders.
+            </p>
+            <div id="cli"></div>
+        </section>
+
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
