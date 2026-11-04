@@ -1,0 +1,17 @@
+{
+  "name": "unocss-nondeterministic-theme",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node make-sources.js",
+    "repro:cli": "node make-sources.js && node repro-cli.js",
+    "repro:order": "node repro-order.js",
+    "start": "node make-sources.js && node repro-order.js && node repro-cli.js"
+  },
+  "dependencies": {
+    "@unocss/cli": "66.12.0",
+    "@unocss/core": "66.12.0",
+    "@unocss/preset-wind4": "66.12.0",
+    "unocss": "66.12.0"
+  }
+}
